@@ -1,5 +1,13 @@
-OKay, two days for the hackathon .
+# Soul Sync LLM Prototype
 
-day 1 : finish up the individual tasks
+## Setup
+1. Clone repo.
+2. In project folder: `python3 -m venv venv` and activate.
+3. `pip install -r requirements.txt`.
 
-day 2 : mount all the individual tasks
+## Run
+- `python generate.py` to test generation with GPT-Neo 125M.
+- (Optional) Export to ONNX with `python -m transformers.onnx --model=EleutherAI/gpt-neo-125M onnx/` then `python generate_onnx.py`.
+
+## Notes
+- CPU-only: may be slow for larger models. Start with 125M.
