@@ -39,7 +39,7 @@ def generate_response(prompt: str,
     if warmup:
         try:
             _ = model.generate(input_ids, attention_mask=attention_mask,
-                               max_new_tokens=5,
+                               max_new_tokens=10,
                                pad_token_id=model.config.pad_token_id)
         except Exception:
             pass

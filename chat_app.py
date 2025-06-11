@@ -23,7 +23,6 @@ def main():
 
     tokenizer, model, device = init_model(model_name)
 
-    # Initialize history in session_state
     if "history" not in st.session_state:
         st.session_state.history = []  # list of (user_msg, bot_msg)
 
@@ -37,7 +36,7 @@ def main():
         user_input = st.session_state.input_text.strip()
         if not user_input:
             return
-        # Truncate history to fit context window
+        # Truncate history to fit context window, takes the newest
         st.session_state.history = truncate_history(st.session_state.history, tokenizer, max_tokens=512)
 
         # Build prompt
