@@ -1,6 +1,6 @@
 import streamlit as st
 import torch
-from context_aware import ContextualChatSystem
+from context.context_aware import ContextualChatSystem
 import plotly.graph_objects as go
 import plotly.express as px
 
