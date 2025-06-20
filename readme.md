@@ -6,7 +6,7 @@
 3. `pip install -r requirements.txt`.
 
 ## Run
-- `python generate.py` to test generation with GPT-Neo 125M.
+- `streamlit run .py` to test generation with GPT-Neo 125M.
 - (Optional) Export to ONNX with `python -m transformers.onnx --model=EleutherAI/gpt-neo-125M onnx/` then `python generate_onnx.py`.
 
 ## Notes
